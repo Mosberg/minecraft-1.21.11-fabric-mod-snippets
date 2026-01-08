@@ -1,94 +1,34 @@
 # Minecraft 1.21.11 Fabric Mod Snippets
 
-This repository contains a collection of useful code snippets and examples for developing Minecraft mods using the Fabric modding framework for version 1.21.11. These snippets cover various aspects of mod development, including item creation, block manipulation, entity handling, and more.
+A VS Code snippets extension for Fabric 1.21.11 modding. All snippets are declarative JSON and grouped by language in the snippets/ folder.
 
-## Table of Contents
+## What you get
 
-- [Getting Started](#getting-started)
-- [Code Snippets](#code-snippets)
-  - [Creating a Custom Item](#creating-a-custom-item)
-  - [Creating a Custom Block](#creating-a-custom-block)
-  - [Handling Events](#handling-events)
-- [Contributing](#contributing)
-- [License](#license)
+- Registries, items, blocks, entities, screens, networking, worldgen, tools (Java) in [snippets/java](snippets/java)
+- Data generation helpers: entrypoint, model, loot, recipe providers in [snippets/java/fabric.json](snippets/java/fabric.json)
+- Command scaffolding (arguments, permissions, feedback) in [snippets/java/command.register.json](snippets/java/command.register.json)
+- Fabric metadata and tags: fabric.mod.json blocks and tags templates in [snippets/json](snippets/json)
+- Gradle and properties blocks for Fabric projects in [snippets/json/gradle.json](snippets/json/gradle.json)
 
-## Getting Started
+## Install
 
-To use the code snippets in this repository, you need to have a basic understanding of Java programming and the Fabric modding framework. Make sure you have the following prerequisites:
+1. Clone the repo or download the VSIX you build locally.
+2. In VS Code, run Extensions: Install from VSIX... and pick the packaged file, or open the folder and press F5 to launch the extension host.
+3. Ensure the workspace language mode matches the snippet file you want (Java or JSON).
 
-- Java Development Kit (JDK) 21 or higher
-- Fabric Mod Loader
-- Fabric API
-- An IDE such as IntelliJ IDEA or Eclipse
-  Clone this repository to your local machine:
+## Using snippets
 
-```bash
-git clone https://github.com/mosberg/minecraft-1.21.11-fabric-mod-snippets.git
-```
-
-## Code Snippets
-
-### Creating a Custom Item
-
-```java
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
-public class CustomItem extends Item {
-    public CustomItem() {
-        super(new Item.Settings().group(ItemGroup.MISC));
-    }
-
-    public static void register() {
-        Registry.register(Registry.ITEM, new Identifier("modid", "custom_item"), new CustomItem());
-    }
-}
-```
-
-### Creating a Custom Block
-
-```java
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
-public class CustomBlock extends Block {
-    public CustomBlock() {
-        super(Settings.of(Material.METAL).strength(4.0f));
-    }
-    public static void register() {
-        Registry.register(Registry.BLOCK, new Identifier("modid", "custom_block"), new CustomBlock());
-    }
-}
-```
-
-### Handling Events
-
-```java
-import net.fabricmc.fabric.api.event.player.UseBlockCallback;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.world.World;
-import net.minecraft.entity.player.PlayerEntity;
-public class EventHandler {
-    public static void register() {
-        UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
-            if (!world.isClient) {
-                BlockHitResult blockHit = (BlockHitResult) hitResult;
-                // Custom logic when a block is used
-                player.sendMessage(new LiteralText("Block used!"), false);
-            }
-            return ActionResult.SUCCESS;
-        });
-    }
-}
-```
+- Trigger snippets by prefix (dotted, lowercase), e.g. reg.item, block.ore, datagen.entry, command.register, fabricmod.base, tag.block.
+- Tab through placeholders; optional parts are left as comments in snippet bodies.
+- Snippets target Fabric API for Minecraft 1.21.11 and Java 21.
 
 ## Contributing
 
-Contributions are welcome! If you have useful code snippets or improvements, feel free to open a pull request or submit an issue.
+- Add new JSON snippet files under snippets/java or snippets/json.
+- Register every snippet file in the contributes.snippets array in [package.json](package.json).
+- Keep prefixes dotted/lowercase and descriptions short; maintain indentation and placeholder numbering.
+- Bump the version in [package.json](package.json) and add notes to [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+MIT. See [LICENSE](LICENSE).
