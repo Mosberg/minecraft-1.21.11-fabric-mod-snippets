@@ -1,0 +1,38 @@
+{
+  "Tag: Blocks": {
+    "prefix": "tag.block",
+    "description": "Block tag with replace flag and values",
+    "body": [
+      "{",
+      "  \"replace\": ${1:false},",
+      "  \"values\": [",
+      "    \"${2:modid:block}\",",
+      "    \"${3:modid:other_block}\"",
+      "  ]",
+      "}"
+    ]
+  },
+  "Tag: Items": {
+    "prefix": "tag.item",
+    "description": "Item tag with replace flag and values",
+    "body": [
+      "{",
+      "  \"replace\": ${1:false},",
+      "  \"values\": [",
+      "    \"${2:modid:item}\",",
+      "    \"${3:modid:other_item}\"",
+      "  ]",
+      "}"
+    ]
+  },
+  "Tag: Optional Values": {
+    "prefix": "tag.optional",
+    "description": "Tag values block with optional entries",
+    "body": [
+      "\"values\": [",
+      "  { \"id\": \"${1:modid:entry}\", \"required\": ${2:false} },",
+      "  { \"id\": \"${3:modid:other_entry}\", \"required\": ${4:false} }",
+      "]"
+    ]
+  }
+}

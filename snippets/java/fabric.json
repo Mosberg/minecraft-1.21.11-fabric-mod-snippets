@@ -136,9 +136,9 @@
       "    public void onInitializeDataGenerator(FabricDataGenerator generator) {",
       "        FabricDataGenerator.Pack pack = generator.createPack();",
       "",
-      "        pack.addProvider(${2:SnippetsModelProvider}::new);",
-      "        pack.addProvider(${3:SnippetsBlockLootProvider}::new);",
-      "        pack.addProvider(${4:SnippetsRecipeProvider}::new);",
+      "        pack.addProvider(${2:ModelProvider}::new);",
+      "        pack.addProvider(${3:LootProvider}::new);",
+      "        pack.addProvider(${4:RecipeProvider}::new);",
       "    }",
       "}"
     ]
@@ -148,9 +148,9 @@
     "prefix": "datagen.model",
     "description": "Model provider for data generation",
     "body": [
-      "public class ${1:ModModelProvider} extends FabricModelProvider {",
+      "public class ${1:ModelProvider} extends FabricModelProvider {",
       "",
-      "    public ${1:ModModelProvider}(FabricDataOutput output) {",
+      "    public ${1:ModelProvider}(FabricDataOutput output) {",
       "        super(output);",
       "    }",
       "",
@@ -171,9 +171,9 @@
     "prefix": "datagen.loot",
     "description": "Block loot table provider for data generation",
     "body": [
-      "public class ${1:ModBlockLootProvider} extends FabricBlockLootTableProvider {",
+      "public class ${1:LootProvider} extends FabricBlockLootTableProvider {",
       "",
-      "    public ${1:ModBlockLootProvider}(FabricDataOutput output) {",
+      "    public ${1:LootProvider}(FabricDataOutput output) {",
       "        super(output);",
       "    }",
       "",
@@ -189,9 +189,9 @@
     "prefix": "datagen.recipe",
     "description": "Recipe provider for data generation",
     "body": [
-      "public class ${1:ModRecipeProvider} extends FabricRecipeProvider {",
+      "public class ${1:RecipeProvider} extends FabricRecipeProvider {",
       "",
-      "    public ${1:ModRecipeProvider}(FabricDataOutput output) {",
+      "    public ${1:RecipeProvider}(FabricDataOutput output) {",
       "        super(output);",
       "    }",
       "",
@@ -208,25 +208,10 @@
       "}"
     ]
   },
-  "DataGen: Loot Provider": {
-    "prefix": "datagen.loot",
-    "body": [
-      "public class ${1:LootProvider} extends FabricBlockLootTableProvider {",
-      "",
-      "    public ${1:LootProvider}(FabricDataOutput output) {",
-      "        super(output);",
-      "    }",
-      "",
-      "    @Override",
-      "    public void generate() {",
-      "        addDrop(${2:BLOCK});",
-      "    }",
-      "}"
-    ],
-    "description": "Block loot table generator"
-  },
+
   "DataGen: Provider Setup": {
     "prefix": "datagen.setup",
+    "description": "Fabric Data Generator initializer",
     "body": [
       "public class ${1:ModDataGenerator} implements DataGeneratorEntrypoint {",
       "",
@@ -239,7 +224,6 @@
       "        pack.addProvider(${4:RecipeProvider}::new);",
       "    }",
       "}"
-    ],
-    "description": "Fabric Data Generator initializer"
+    ]
   }
 }

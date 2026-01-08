@@ -1,0 +1,53 @@
+{
+  "fabric.mod.json: base": {
+    "prefix": "fabricmod.base",
+    "description": "Base fabric.mod.json with metadata and depends",
+    "body": [
+      "{",
+      "  \"schemaVersion\": 1,",
+      "  \"id\": \"${1:modid}\",",
+      "  \"version\": \"${2:1.0.0}\",",
+      "  \"name\": \"${3:Mod Name}\",",
+      "  \"description\": \"${4:A Fabric mod}\",",
+      "  \"authors\": [\"${5:Author}\"],",
+      "  \"contact\": {",
+      "    \"homepage\": \"${6:https://example.com}\",",
+      "    \"sources\": \"${7:https://github.com/example/mod}\",",
+      "    \"issues\": \"${8:https://github.com/example/mod/issues}\"",
+      "  },",
+      "  \"license\": \"${9:MIT}\",",
+      "  \"icon\": \"assets/${1:modid}/icon.png\",",
+      "  \"environment\": \"*\",",
+      "  \"depends\": {",
+      "    \"fabricloader\": \">=${10:0.16.10}\",",
+      "    \"fabric\": \"*\",",
+      "    \"minecraft\": \"${11:1.21.11}\",",
+      "    \"java\": \">=${12:21}\"",
+      "  }",
+      "}"
+    ]
+  },
+  "fabric.mod.json: entrypoints": {
+    "prefix": "fabricmod.entrypoints",
+    "description": "Entrypoints block for main/client/server/datagen",
+    "body": [
+      "\"entrypoints\": {",
+      "  \"main\": [\"${1:com.example.mod.ModInit}\"],",
+      "  \"client\": [\"${2:com.example.mod.client.ModClient}\"],",
+      "  \"server\": [\"${3:com.example.mod.server.ModServer}\"],",
+      "  \"datagen\": [\"${4:com.example.mod.datagen.ModDataGen}\"]",
+      "}"
+    ]
+  },
+  "fabric.mod.json: mixins": {
+    "prefix": "fabricmod.mixins",
+    "description": "Mixins and access widener entries",
+    "body": [
+      "\"mixins\": [",
+      "  \"${1:modid}.mixins.json\",",
+      "  \"${2:modid}.client.mixins.json\"",
+      "],",
+      "\"accessWidener\": \"${3:modid}.accesswidener\""
+    ]
+  }
+}

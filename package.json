@@ -2,7 +2,7 @@
   "name": "minecraft-1.21.11-fabric-mod-snippets",
   "displayName": "Minecraft 1.21.11 Fabric Mod Snippets",
   "description": "Comprehensive VSCode snippets extension for Minecraft 1.21.11 Fabric mod development (registries, items, blocks, entities, data generation, and more).",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "Mosberg",
   "engines": {
     "vscode": "^1.85.0"
@@ -32,6 +32,14 @@
       {
         "language": "json",
         "path": "./snippets/json/gradle.settings.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json/fabric.mod.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json/tags.json"
       },
       {
         "language": "java",
