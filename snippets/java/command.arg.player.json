@@ -1,0 +1,18 @@
+{
+  "Command with Player Argument": {
+    "prefix": "command.arg.player",
+    "description": "Command with player selector argument",
+    "body": [
+      "dispatcher.register(CommandManager.literal(\"${1:mycommand}\")",
+      "    .then(CommandManager.argument(\"${2:target}\", EntityArgumentType.player())",
+      "        .executes(context -> {",
+      "            ServerPlayerEntity ${2:target} = EntityArgumentType.getPlayer(context, \"${2:target}\");",
+      "            ${3:// Command logic}",
+      "            return 1;",
+      "        })",
+      "    )",
+      ");",
+      "$0"
+    ]
+  }
+}

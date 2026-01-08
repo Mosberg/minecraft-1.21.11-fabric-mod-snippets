@@ -1,0 +1,27 @@
+{
+  "Block Entity Class": {
+    "prefix": "blockentity",
+    "description": "Create a block entity class",
+    "body": [
+      "public class ${1:MyBlockEntity} extends BlockEntity {",
+      "    ",
+      "    public ${1:MyBlockEntity}(BlockPos pos, BlockState state) {",
+      "        super(${2:MOD_BLOCK_ENTITIES.MY_BLOCK_ENTITY}, pos, state);",
+      "    }",
+      "    ",
+      "    @Override",
+      "    public void readNbt(NbtCompound nbt) {",
+      "        super.readNbt(nbt);",
+      "        ${3:// Read NBT data}",
+      "    }",
+      "    ",
+      "    @Override",
+      "    protected void writeNbt(NbtCompound nbt) {",
+      "        super.writeNbt(nbt);",
+      "        ${4:// Write NBT data}",
+      "    }",
+      "}",
+      "$0"
+    ]
+  }
+}

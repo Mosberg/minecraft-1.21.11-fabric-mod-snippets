@@ -1,0 +1,9 @@
+{
+  "Command Send Feedback": {
+    "prefix": "command.feedback",
+    "description": "Send command feedback to player",
+    "body": [
+      "context.getSource().sendFeedback(() -> Text.literal(\"${1:Command executed!}\"), ${2:false});"
+    ]
+  }
+}

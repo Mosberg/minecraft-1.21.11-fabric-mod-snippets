@@ -1,0 +1,170 @@
+{
+  "name": "minecraft-1.21.11-fabric-mod-snippets",
+  "displayName": "Minecraft 1.21.11 Fabric Mod Snippets",
+  "description": "Comprehensive VSCode snippets extension for Minecraft 1.21.11 Fabric mod development (registries, items, blocks, entities, data generation, and more).",
+  "version": "1.0.0",
+  "publisher": "Mosberg",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "icon": "icon.png",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "java",
+        "path": "./snippets/java/block.withentity.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json/fabric.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json/gradle.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json/gradle.properties.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json/gradle.settings.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/blockentity.inventory.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/blockentity.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/blockentity.register.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/blockentity.tickable.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/command.arg.blockpos.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/command.arg.integer.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/command.arg.player.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/command.arg.string.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/command.error.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/command.feedback.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/command.permission.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/command.register.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/command.subcommand.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric-block-item.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric-datagen.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric-entity-attrs.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric-entity.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric.events.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric-item-model.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric-item.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric.items.advanced.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric-loot-block.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric.mixins.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric.networking.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric.screen.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric-tags-block.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric.tool.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric.worldgen.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fabric.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/fid.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java/itemgroup.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mosberg/minecraft-1.21.11-fabric-mod-snippets"
+  },
+  "bugs": {
+    "url": "https://github.com/mosberg/minecraft-1.21.11-fabric-mod-snippets/issues"
+  },
+  "homepage": "https://mosberg.github.io/minecraft-1.21.11-fabric-mod-snippets"
+}

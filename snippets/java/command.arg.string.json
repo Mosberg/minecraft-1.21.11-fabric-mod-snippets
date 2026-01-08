@@ -1,0 +1,18 @@
+{
+  "Command with String Argument": {
+    "prefix": "command.arg.string",
+    "description": "Command with string argument",
+    "body": [
+      "dispatcher.register(CommandManager.literal(\"${1:mycommand}\")",
+      "    .then(CommandManager.argument(\"${2:name}\", StringArgumentType.${3:word}())",
+      "        .executes(context -> {",
+      "            String ${2:name} = StringArgumentType.getString(context, \"${2:name}\");",
+      "            ${4:// Command logic}",
+      "            return 1;",
+      "        })",
+      "    )",
+      ");",
+      "$0"
+    ]
+  }
+}

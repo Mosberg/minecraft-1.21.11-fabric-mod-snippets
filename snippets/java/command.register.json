@@ -1,0 +1,17 @@
+{
+  "Register Command": {
+    "prefix": "command.register",
+    "description": "Register a command",
+    "body": [
+      "CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {",
+      "    dispatcher.register(CommandManager.literal(\"${1:mycommand}\")",
+      "        .executes(context -> {",
+      "            ${2:// Command logic}",
+      "            return 1;",
+      "        })",
+      "    );",
+      "});",
+      "$0"
+    ]
+  }
+}

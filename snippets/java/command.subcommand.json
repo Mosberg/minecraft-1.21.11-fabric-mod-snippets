@@ -1,0 +1,23 @@
+{
+  "Subcommand": {
+    "prefix": "command.subcommand",
+    "description": "Command with subcommands",
+    "body": [
+      "dispatcher.register(CommandManager.literal(\"${1:mycommand}\")",
+      "    .then(CommandManager.literal(\"${2:subcommand1}\")",
+      "        .executes(context -> {",
+      "            ${3:// Subcommand 1 logic}",
+      "            return 1;",
+      "        })",
+      "    )",
+      "    .then(CommandManager.literal(\"${4:subcommand2}\")",
+      "        .executes(context -> {",
+      "            ${5:// Subcommand 2 logic}",
+      "            return 1;",
+      "        })",
+      "    )",
+      ");",
+      "$0"
+    ]
+  }
+}

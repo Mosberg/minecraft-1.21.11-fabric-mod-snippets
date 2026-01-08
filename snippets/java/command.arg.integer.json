@@ -1,0 +1,18 @@
+{
+  "Command with Integer Argument": {
+    "prefix": "command.arg.integer",
+    "description": "Command with integer argument",
+    "body": [
+      "dispatcher.register(CommandManager.literal(\"${1:mycommand}\")",
+      "    .then(CommandManager.argument(\"${2:amount}\", IntegerArgumentType.integer(${3:0}, ${4:100}))",
+      "        .executes(context -> {",
+      "            int ${2:amount} = IntegerArgumentType.getInteger(context, \"${2:amount}\");",
+      "            ${5:// Command logic}",
+      "            return 1;",
+      "        })",
+      "    )",
+      ");",
+      "$0"
+    ]
+  }
+}

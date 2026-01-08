@@ -1,0 +1,30 @@
+{
+  "Block with Entity": {
+    "prefix": "block.withentity",
+    "description": "Block with BlockEntity implementation",
+    "body": [
+      "public class ${1:MyBlock} extends BlockWithEntity {",
+      "    ",
+      "    public ${1:MyBlock}(Settings settings) {",
+      "        super(settings);",
+      "    }",
+      "    ",
+      "    @Override",
+      "    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {",
+      "        return new ${2:MyBlockEntity}(pos, state);",
+      "    }",
+      "    ",
+      "    @Override",
+      "    public BlockRenderType getRenderType(BlockState state) {",
+      "        return BlockRenderType.${3:MODEL};",
+      "    }",
+      "    ",
+      "    ${4:// @Override}",
+      "    ${5:// public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) \\{}",
+      "    ${6://     return checkType(type, MOD_BLOCK_ENTITIES.MY_BLOCK_ENTITY, MyBlockEntity::tick);}",
+      "    ${7:// \\}}",
+      "}",
+      "$0"
+    ]
+  }
+}

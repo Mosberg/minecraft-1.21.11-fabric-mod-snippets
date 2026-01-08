@@ -1,0 +1,16 @@
+{
+  "Command with Permission": {
+    "prefix": "command.permission",
+    "description": "Command requiring permission level",
+    "body": [
+      "dispatcher.register(CommandManager.literal(\"${1:mycommand}\")",
+      "    .requires(source -> source.hasPermissionLevel(${2:2}))",
+      "    .executes(context -> {",
+      "        ${3:// Command logic}",
+      "        return 1;",
+      "    })",
+      ");",
+      "$0"
+    ]
+  }
+}

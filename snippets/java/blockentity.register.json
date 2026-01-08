@@ -1,0 +1,14 @@
+{
+  "Block Entity Registration": {
+    "prefix": "blockentity.register",
+    "description": "Register a block entity type",
+    "body": [
+      "public static final BlockEntityType<${1:MyBlockEntity}> ${2:MY_BLOCK_ENTITY} = Registry.register(",
+      "    Registries.BLOCK_ENTITY_TYPE,",
+      "    Identifier.of(${3:MOD_ID}, \"${4:my_block_entity}\"),",
+      "    BlockEntityType.Builder.create(${1:MyBlockEntity}::new, ${5:MOD_BLOCKS.MY_BLOCK}).build()",
+      ");",
+      "$0"
+    ]
+  }
+}

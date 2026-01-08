@@ -1,0 +1,9 @@
+{
+  "Command Send Error": {
+    "prefix": "command.error",
+    "description": "Send error message and fail command",
+    "body": [
+      "throw new CommandException(Text.literal(\"${1:Error message}\"));"
+    ]
+  }
+}

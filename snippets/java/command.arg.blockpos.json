@@ -1,0 +1,18 @@
+{
+  "Command with Block Position": {
+    "prefix": "command.arg.blockpos",
+    "description": "Command with block position argument",
+    "body": [
+      "dispatcher.register(CommandManager.literal(\"${1:mycommand}\")",
+      "    .then(CommandManager.argument(\"${2:pos}\", BlockPosArgumentType.blockPos())",
+      "        .executes(context -> {",
+      "            BlockPos ${2:pos} = BlockPosArgumentType.getBlockPos(context, \"${2:pos}\");",
+      "            ${3:// Command logic}",
+      "            return 1;",
+      "        })",
+      "    )",
+      ");",
+      "$0"
+    ]
+  }
+}
